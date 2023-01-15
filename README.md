@@ -1,7 +1,7 @@
 # AestheticFox
 A minamist and aesthetic userstyle theme for FIrefox.
 
-![image](preview.png)
+![image](theme.png)
 
 
 ## Installation
