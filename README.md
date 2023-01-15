@@ -1,6 +1,9 @@
 # AestheticFox
 A minamist and aesthetic userstyle theme for FIrefox.
 
+![image](preview.png)
+
+
 ## Installation
 
 - In the ```about:config``` page on your Firefox browser, set the following parameters to **True** :
