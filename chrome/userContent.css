@@ -1,0 +1,32 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home),url(about:privatebrowsing) {  
+    body{
+        background-size: cover !important;
+        background-image: url("components/wallpaper.png")!important;
+        --newtab-background-color: #000000 !important;
+        --newtab-background-color-secondary: #000000 !important;
+    }
+
+    /* removing watermark and logo */
+    .logo-and-wordmark{
+        opacity: 0;
+    }
+
+    #searchSuggestionTable{
+        opacity: 0;
+    }
+
+    /* search border gradient */
+    .search-inner-wrapper{
+        border-radius: 50px;
+        border: double 3px transparent;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
+        linear-gradient(90deg, #e08392, #e1a4e4, #e0b4e5, #e8daf8, #6699CC, #5FB3B3 ) !important;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        overflow: hidden;
+        border-collapse: separate; 
+    }
+    #newtab-search-text{
+        opacity: 60% !important;
+    }
+}

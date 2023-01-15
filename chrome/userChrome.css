@@ -1,0 +1,107 @@
+/* made by Aidan Mercer*/
+/* removing elements */
+#stop-button, .urlbarView, #downloads-button, #reload-button, #tracking-protection-icon-container, #identity-permission-box, #identity-box, #star-button, #urlbar-zoom-button, #reader-mode-button, #tracking-protection-icon-container, #identity-permission-box, .tab-secondary-label, #pageActionButton, #page-action-buttons{
+  display: none !important;
+}
+#forward-button[disabled="true"] { display: none !important }
+#back-button[disabled="true"] { display: none !important }
+
+/*rearanging elements */
+#back-button, #forward-button{
+  -moz-box-ordinal-group: 0 !important;
+} 
+
+#navigator-toolbox {
+  border      : none !important;
+}
+.titlebar-spacer {
+  display     : none !important;
+}
+#urlbar-background {
+  border      : none !important;
+}
+#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
+  box-shadow  : none !important;
+  background  : none !important;
+}
+
+#TabsToolbar {
+  margin-left : 20vw !important;
+}
+
+#nav-bar {
+  margin-right: 80vw !important;
+}
+
+#urlbar-container {
+  min-width   : 0px !important;
+}
+:root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
+  margin-top  : -35px !important;
+  height      : 35px !important;
+}
+
+.tab-context-line{
+  display: none !important;
+}
+
+
+
+/* selected tab */
+#titlebar{
+  --toolbar-bgcolor: #e1a4e49a !important;
+}
+
+/*taskbar*/
+toolbar{
+  -moz-appearance: none !important;
+  background-color: #e1a4e47a !important;
+}
+
+
+#urlbar-background{
+  background-color: rgb(0, 0, 0, 0) !important;
+}
+
+.tab-icon-stack{
+  display: none !important;
+}
+
+/* hide bookmark bar */
+#PersonalToolbar{
+  --uc-bm-height: 20px;
+  --uc-bm-padding: 4px; /* Vertical padding for bookmarks */
+  --uc-autohide-toolbar-delay: 250ms; /* toolbar hidden delay */
+  
+  --uc-autohide-toolbar-focus-rotation: 0deg;
+  --uc-autohide-toolbar-hover-rotation: 0deg; 
+}
+
+:root[uidensity="compact"] #PersonalToolbar{ --uc-bm-padding: 1px }
+:root[uidensity="touch"] #PersonalToolbar{ --uc-bm-padding: 7px }
+
+#PersonalToolbar:not([customizing]){
+  position: relative;
+  margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: transform 135ms linear var(--uc-autohide-toolbar-delay) !important;
+  z-index: 1;
+}
+
+#PlacesToolbarItems > .bookmark-item{ padding-block: var(--uc-bm-padding) !important; }
+
+#nav-bar:focus-within + #PersonalToolbar{
+  transition-delay: 100ms !important;
+  transform: rotateX(var(--uc-autohide-toolbar-focus-rotation,0));
+}
+
+#navigator-toolbox:hover > #PersonalToolbar{
+  transition-delay: 100ms !important;
+  transform: rotateX(var(--uc-autohide-toolbar-hover-rotation,0));
+}
+
+#navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar {  
+  transform: rotateX(0);
+}
+
