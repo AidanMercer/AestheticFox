@@ -13,3 +13,11 @@ A minamist and aesthetic userstyle theme for FIrefox.
   - On Windows : ```C:\Users\[USERNAME]\AppData\Roaming\Mozilla\Firefox\Profiles\######.default-release\chrome\```
   - On MacOS : ```Users/[USERNAME]/Library/Application Support/Firefox/Profiles/######.default-release/chrome```
   - If it doesn't exist already create a folder called chrome
+
+## Author:
+- Aidan Mercer
+
+## Contact:
+# if you have any questions or concerns, please feel free to contact me at:
+- Aidanmercer@gmail.com
+- aidan#5213
