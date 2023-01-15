@@ -18,6 +18,6 @@ A minamist and aesthetic userstyle theme for FIrefox.
 - Aidan Mercer
 
 ## Contact:
-# if you have any questions or concerns, please feel free to contact me at:
+if you have any questions or concerns, please feel free to contact me at:
 - Aidanmercer@gmail.com
 - aidan#5213
