@@ -1,5 +1,5 @@
 # AestheticFox
-A minamist and aesthetic userstyle theme for FIrefox.
+A minamist and aesthetic userstyle theme for Firefox.
 
 ![image](theme.png)
 
