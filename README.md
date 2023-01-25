@@ -21,4 +21,4 @@ A minamist and aesthetic userstyle theme for Firefox.
 if you have any questions or concerns, please feel free to contact me at:
 - Aidanmercer@gmail.com
 - aidan#5213
-or ask a question in the Q&A in Discussions.
+or ask a question in the 🙏Q&A in Discussions.
