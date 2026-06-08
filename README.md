@@ -18,6 +18,4 @@ A minamist and aesthetic userstyle theme for Firefox.
 - Aidan Mercer
 
 ## Contact:
-if you have any questions or concerns, please feel free to contact me at:
-- aidan#5213
-or ask a question in the 🙏Q&A in Discussions.
+if you have any questions or concerns, please feel free to email more or create an issue.
