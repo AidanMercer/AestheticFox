@@ -109,3 +109,33 @@ toolbar{
 border-image: 1 0 0 0 linear-gradient(90deg, #e08392, #e1a4e4, #e0b4e5, #e8daf8, #6699CC, #5FB3B3 ) !important;
 
 }
+
+/* ===== Window controls (minimize / maximize / close) ===== */
+
+/* macOS: the traffic-light buttons live at the START of the tab strip, so the
+   `#TabsToolbar { margin-left: 20vw }` shift above dragged them to the right of
+   the URL box. Pin them back to the top-left corner and nudge the URL bar over
+   so the two don't overlap. */
+@media (-moz-platform: macos) {
+  .titlebar-buttonbox-container {
+    position    : fixed !important;
+    top         : 0 !important;
+    left        : 0 !important;
+    height      : 35px !important;
+    margin      : 0 !important;
+    z-index     : 3 !important;
+  }
+  #nav-bar {
+    margin-left : 80px !important;
+  }
+}
+
+/* Windows 11: controls are pinned to the right edge and are unaffected by the
+   tab-strip shift, so no repositioning is needed — this block only makes sure
+   the button box stays visible and snug against the right edge. */
+@media (-moz-platform: windows) {
+  .titlebar-buttonbox-container {
+    -moz-box-ordinal-group: 1000 !important;
+    margin-left           : auto !important;
+  }
+}
