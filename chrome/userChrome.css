@@ -155,3 +155,29 @@ border-image: 1 0 0 0 var(--gradient) !important;
     margin-left           : auto !important;
   }
 }
+
+/* right click menus to match the theme */
+menupopup {
+  --panel-background  : #2b2a33 !important;
+  --panel-color       : #e8daf8 !important;
+  --panel-border-color: #e1a4e4 !important;
+  --panel-border-radius: 10px !important;
+}
+menupopup > menuitem[_moz-menuactive="true"],
+menupopup > menu[_moz-menuactive="true"] {
+  background-color: #e1a4e47a !important;
+}
+
+/* find bar */
+findbar {
+  background  : #2b2a33 !important;
+  color       : #e8daf8 !important;
+  border-top  : 2px solid transparent !important;
+  border-image: 1 0 0 0 var(--gradient) !important;
+}
+.findbar-textbox {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  color           : #e8daf8 !important;
+  border          : 1px solid #e1a4e4 !important;
+  border-radius   : 20px !important;
+}
