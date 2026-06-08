@@ -1,4 +1,9 @@
 /* made by Aidan Mercer*/
+
+:root {
+  --gradient: linear-gradient(90deg, #e08392, #e1a4e4, #e0b4e5, #e8daf8, #6699CC, #5FB3B3);
+}
+
 /* removing elements */
 #stop-button, .urlbarView, #downloads-button, #reload-button, #tracking-protection-icon-container, #identity-permission-box, #identity-box, #star-button, #urlbar-zoom-button, #reader-mode-button, #tracking-protection-icon-container, #identity-permission-box, .tab-secondary-label, #pageActionButton, #page-action-buttons{
   display: none !important;
@@ -23,6 +28,16 @@
 #urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
   box-shadow  : none !important;
   background  : none !important;
+}
+
+/* gradient ring when you click into the bar, matches the new tab search box */
+#nav-bar #urlbar[focused="true"] > #urlbar-background {
+  border          : 2px solid transparent !important;
+  border-radius   : 30px !important;
+  background-image: linear-gradient(#2b2a33, #2b2a33), var(--gradient) !important;
+  background-origin: border-box !important;
+  background-clip : padding-box, border-box !important;
+  transition      : 120ms ease !important;
 }
 
 #TabsToolbar {
@@ -106,16 +121,19 @@ toolbar{
   background-image: linear-gradient(#2B2A33 1.5px,#2B2A33 2px,#2B2A33) !important;
   /*border-top: 1.5px solid #00DDFF !important;*/
   border-top: 2.5px solid transparent !important;
-border-image: 1 0 0 0 linear-gradient(90deg, #e08392, #e1a4e4, #e0b4e5, #e8daf8, #6699CC, #5FB3B3 ) !important;
+border-image: 1 0 0 0 var(--gradient) !important;
 
 }
 
-/* ===== Window controls (minimize / maximize / close) ===== */
+/* smooth out tab switching */
+.tabbrowser-tab, .tab-background {
+  transition: 120ms ease !important;
+}
 
-/* macOS: the traffic-light buttons live at the START of the tab strip, so the
-   `#TabsToolbar { margin-left: 20vw }` shift above dragged them to the right of
-   the URL box. Pin them back to the top-left corner and nudge the URL bar over
-   so the two don't overlap. */
+/* window buttons */
+/* on mac the close/min/max buttons sit at the start of the tab strip, so the
+   20vw shift above shoves them next to the urlbar. pin them back to the corner
+   and push the urlbar over a bit so they dont overlap. */
 @media (-moz-platform: macos) {
   .titlebar-buttonbox-container {
     position    : fixed !important;
@@ -130,9 +148,7 @@ border-image: 1 0 0 0 linear-gradient(90deg, #e08392, #e1a4e4, #e0b4e5, #e8daf8,
   }
 }
 
-/* Windows 11: controls are pinned to the right edge and are unaffected by the
-   tab-strip shift, so no repositioning is needed — this block only makes sure
-   the button box stays visible and snug against the right edge. */
+/* windows keeps them on the right, just make sure they stay pinned there */
 @media (-moz-platform: windows) {
   .titlebar-buttonbox-container {
     -moz-box-ordinal-group: 1000 !important;
